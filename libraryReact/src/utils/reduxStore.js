@@ -20,4 +20,5 @@ let reduxStore=configureStore({
     },
 })
 
+export let addBook=addBookSlice.actions;
 export default reduxStore;

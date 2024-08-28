@@ -23,7 +23,7 @@ function BookList(){
             }
         }
     }
-    let filteredData=[];
+    if(paramData.category){let filteredData=[];
         for(let i=0;i<data.length;i++){
             for(let j=0;j<data[i].genre.length;j++){
                 if(paramData.category==data[i].genre[j]){
@@ -31,7 +31,8 @@ function BookList(){
                 }
             }
         }
-    filteredBooks=filteredData
+    filteredBooks=filteredData;
+    }
     function filterByGenre(e){
         e.target.style.backgroundColor="lightgreen";
         let filteredData=[];
